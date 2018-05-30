@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */; };
-		156CB6AC20BDCEEA001DB3C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB6AB20BDCEEA001DB3C7 /* ViewController.swift */; };
 		156CB6AF20BDCEEA001DB3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6AD20BDCEEA001DB3C7 /* Main.storyboard */; };
 		156CB6B120BDCEEB001DB3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */; };
 		156CB6B420BDCEEB001DB3C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6B220BDCEEB001DB3C7 /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		156CB6A620BDCEEA001DB3C7 /* SantanderInvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantanderInvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		156CB6AB20BDCEEA001DB3C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		156CB6AE20BDCEEA001DB3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		156CB6B320BDCEEB001DB3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,11 +95,9 @@
 		156CB6A820BDCEEA001DB3C7 /* SantanderInvest */ = {
 			isa = PBXGroup;
 			children = (
+				156CB6F820BE21EB001DB3C7 /* Scenes */,
+				156CB6F620BE2180001DB3C7 /* Resources */,
 				156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */,
-				156CB6AB20BDCEEA001DB3C7 /* ViewController.swift */,
-				156CB6AD20BDCEEA001DB3C7 /* Main.storyboard */,
-				156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */,
-				156CB6B220BDCEEB001DB3C7 /* LaunchScreen.storyboard */,
 				156CB6B520BDCEEB001DB3C7 /* Info.plist */,
 			);
 			path = SantanderInvest;
@@ -123,6 +119,31 @@
 				156CB6CB20BDCEEB001DB3C7 /* Info.plist */,
 			);
 			path = SantanderInvestUITests;
+			sourceTree = "<group>";
+		};
+		156CB6F620BE2180001DB3C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */,
+				156CB6F720BE2186001DB3C7 /* Storyboards */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		156CB6F720BE2186001DB3C7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				156CB6AD20BDCEEA001DB3C7 /* Main.storyboard */,
+				156CB6B220BDCEEB001DB3C7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		156CB6F820BE21EB001DB3C7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +277,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				156CB6AC20BDCEEA001DB3C7 /* ViewController.swift in Sources */,
 				156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SantanderInvest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,7 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.santander.SantanderInvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,6 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SantanderInvest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.santander.SantanderInvest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
