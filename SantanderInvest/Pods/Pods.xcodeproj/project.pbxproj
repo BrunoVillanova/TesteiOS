@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0817B755B9E8100ED8B5AD3879A98834 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		16B828C2126D819133FE3BEDC7E30AF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		3BAF10E755EB8DFD8A928672F0CE0785 /* Pods-SantanderInvest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72686B5A7F5C1A7488B20AA9E35CD81E /* Pods-SantanderInvest-dummy.m */; };
+		3BD5635E50867C9B3140721FE52534F4 /* TweeActiveTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A7FEFEB22D26B045E7E5D0E794FD2 /* TweeActiveTextField.swift */; };
+		3DCDFFB7A1CBCE14AF59ECF1B1339E5E /* TweeBorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DE1EE1377957768150894411420A7 /* TweeBorderedTextField.swift */; };
+		413BBD70AD49FB4DEF31211F4ADEF2B8 /* Pods-SantanderInvest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C3417F19D58567B50C121C1B505391A /* Pods-SantanderInvest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		469DF11F645DF670E409EDC48CBF0A65 /* TweeAttributedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AD77775FF1E54446742F581402CF56 /* TweeAttributedTextField.swift */; };
+		470D4054BA971ADABEE1B77C49267BC3 /* FontAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52A0E2118E2BB58620FFB0011150B35 /* FontAnimation.swift */; };
+		4E0476392D221F345F4FE28C1D820220 /* Pods-SantanderInvestTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D70432A4C2CA3DEA92E1CD8A27D04D10 /* Pods-SantanderInvestTests-dummy.m */; };
+		722D6B208766F3BD336AECA260A91D5C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		77AE23A329D192809CE8B6394C9C8595 /* TweeTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DF13EF9A891C9B265CA91D87AE6D27 /* TweeTextField-dummy.m */; };
+		94A9A142095188B0A52EB3491E4EC8D3 /* Pods-SantanderInvestTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C248FBD21047735153ABF5D65A44B3A /* Pods-SantanderInvestTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95BEC6ADD6C733E80AF088F3E590683F /* TweeTextField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6EDCF49687FC961158C5BFCB242AFD9 /* TweeTextField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BD69D93FC2D9E6C523375A8CFC6554A /* Pods-SantanderInvestUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5F57BDA38CE854358F63E90FA5A657 /* Pods-SantanderInvestUITests-dummy.m */; };
+		AB372186554928F81BBB0D41E0565E76 /* Pods-SantanderInvestUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92970F47069CAED5575C471FBB81D95B /* Pods-SantanderInvestUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE7F81C8AEB4B1FF3D8CDC38B61CDC98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		C162F536CE0F40774462B0E393E338BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		FEF7A7DAC38B96FDDF364096EC75118E /* TweePlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C1B6EDE1EB141EC71B718655A99CC3 /* TweePlaceholderTextField.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DCEBD4FBC80A5042342859CA97F3C38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03C38B2DDD81377171E7F496A9724800;
+			remoteInfo = "Pods-SantanderInvest";
+		};
+		757CFC19D2A262A8EDE4508B231F3AC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 836B7001FA05A003BF19DD9776FA2394;
+			remoteInfo = TweeTextField;
+		};
+		DA1835DC003A13A177EC3C9CF7FA2DEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03C38B2DDD81377171E7F496A9724800;
+			remoteInfo = "Pods-SantanderInvest";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03AD77775FF1E54446742F581402CF56 /* TweeAttributedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweeAttributedTextField.swift; path = Sources/TweeAttributedTextField.swift; sourceTree = "<group>"; };
+		082CB86A05DC4C78095BAE974DF146E4 /* Pods_SantanderInvestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SantanderInvestUITests.framework; path = "Pods-SantanderInvestUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		087DE1EE1377957768150894411420A7 /* TweeBorderedTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweeBorderedTextField.swift; path = Sources/TweeBorderedTextField.swift; sourceTree = "<group>"; };
+		0ED6786F44900D1A2B692FAC3515369C /* TweeTextField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TweeTextField.modulemap; sourceTree = "<group>"; };
+		126407F96EF2C638E638FC375FAE54A3 /* Pods-SantanderInvestUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SantanderInvestUITests-frameworks.sh"; sourceTree = "<group>"; };
+		185F52FCDC67A083C30D89F02BF60306 /* Pods_SantanderInvest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SantanderInvest.framework; path = "Pods-SantanderInvest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25EC597A759A180FC4FDE7537536CBB6 /* Pods-SantanderInvestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SantanderInvestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		26B88DB507B969464C8B8F81162FE84C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A49BEDA99DCFD4628D6D7B58A733EAE /* TweeTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TweeTextField.xcconfig; sourceTree = "<group>"; };
+		2ED362780DDF3E88419832143FF354F8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F14611EC5FE59760D771EC52C1EE060 /* Pods_SantanderInvestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SantanderInvestTests.framework; path = "Pods-SantanderInvestTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		303A5A26F24816F6EA765E51DA424AE7 /* Pods-SantanderInvest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SantanderInvest-resources.sh"; sourceTree = "<group>"; };
+		30D05E0BA580D6C2094DFAE9221DA101 /* Pods-SantanderInvestTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SantanderInvestTests-resources.sh"; sourceTree = "<group>"; };
+		31B61477171F5AC7FE00DC319DD02F9B /* Pods-SantanderInvestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SantanderInvestTests.release.xcconfig"; sourceTree = "<group>"; };
+		32DF13EF9A891C9B265CA91D87AE6D27 /* TweeTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TweeTextField-dummy.m"; sourceTree = "<group>"; };
+		34C6EF1336E7017D938836CCED629885 /* TweeTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TweeTextField.framework; path = TweeTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5F57BDA38CE854358F63E90FA5A657 /* Pods-SantanderInvestUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SantanderInvestUITests-dummy.m"; sourceTree = "<group>"; };
+		43AF038AC36FB9BAB21D8CB4DB24CE44 /* Pods-SantanderInvestUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SantanderInvestUITests.modulemap"; sourceTree = "<group>"; };
+		4DD29BB8406BAE6DEA9484132B086DAD /* Pods-SantanderInvestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SantanderInvestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		58C1229E6AACFA99AB17D851E7DD32A2 /* Pods-SantanderInvestTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SantanderInvestTests-frameworks.sh"; sourceTree = "<group>"; };
+		6806928D5153DD0FA74598266DC95205 /* Pods-SantanderInvestUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SantanderInvestUITests-resources.sh"; sourceTree = "<group>"; };
+		691194A9AA949EB158EB18B78DBDD837 /* Pods-SantanderInvest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SantanderInvest-acknowledgements.plist"; sourceTree = "<group>"; };
+		6A1C7716D0FEB53CA0B7E916915DE0C0 /* Pods-SantanderInvestTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SantanderInvestTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		72686B5A7F5C1A7488B20AA9E35CD81E /* Pods-SantanderInvest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SantanderInvest-dummy.m"; sourceTree = "<group>"; };
+		7C248FBD21047735153ABF5D65A44B3A /* Pods-SantanderInvestTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SantanderInvestTests-umbrella.h"; sourceTree = "<group>"; };
+		8165258B7A24870D893D01178041DE15 /* Pods-SantanderInvestTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SantanderInvestTests.modulemap"; sourceTree = "<group>"; };
+		85299ED7DBAD9C16FE815AEAFA10EDF2 /* TweeTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweeTextField-prefix.pch"; sourceTree = "<group>"; };
+		8778E675F7ADDEFE5A0605F2985CBEF7 /* Pods-SantanderInvest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SantanderInvest.debug.xcconfig"; sourceTree = "<group>"; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		90A0EEE90AEA9B81BF9CD8F81016A341 /* Pods-SantanderInvestUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SantanderInvestUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		92970F47069CAED5575C471FBB81D95B /* Pods-SantanderInvestUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SantanderInvestUITests-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95C1B6EDE1EB141EC71B718655A99CC3 /* TweePlaceholderTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweePlaceholderTextField.swift; path = Sources/TweePlaceholderTextField.swift; sourceTree = "<group>"; };
+		98F9E07D464013340E37C7D152E8E53C /* Pods-SantanderInvest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SantanderInvest.release.xcconfig"; sourceTree = "<group>"; };
+		9C3417F19D58567B50C121C1B505391A /* Pods-SantanderInvest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SantanderInvest-umbrella.h"; sourceTree = "<group>"; };
+		A71A7FEFEB22D26B045E7E5D0E794FD2 /* TweeActiveTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TweeActiveTextField.swift; path = Sources/TweeActiveTextField.swift; sourceTree = "<group>"; };
+		B0219A1284B9F9459D4703E83885083C /* Pods-SantanderInvestUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SantanderInvestUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B862DE21F06CBC0034873DFD64734608 /* Pods-SantanderInvestTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SantanderInvestTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BB785D47A06D2EAA8422E7FA685E7D54 /* Pods-SantanderInvest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SantanderInvest-frameworks.sh"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BE5188D4D84837B405E7F085F8BA2ECA /* Pods-SantanderInvestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SantanderInvestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6EDCF49687FC961158C5BFCB242AFD9 /* TweeTextField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TweeTextField-umbrella.h"; sourceTree = "<group>"; };
+		CD692113FCF70B85193CB32ED1214DCE /* Pods-SantanderInvest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SantanderInvest.modulemap"; sourceTree = "<group>"; };
+		D52A0E2118E2BB58620FFB0011150B35 /* FontAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontAnimation.swift; path = Sources/FontAnimation.swift; sourceTree = "<group>"; };
+		D70432A4C2CA3DEA92E1CD8A27D04D10 /* Pods-SantanderInvestTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SantanderInvestTests-dummy.m"; sourceTree = "<group>"; };
+		DB6F7B17586A0CCE6F47529994B34AB7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE4DFA48A9212C8814C59DF002B56FE6 /* Pods-SantanderInvest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SantanderInvest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F1D567FCD64339E681CAB17B69EFE096 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C40C490BB99C60B4CCA34E7BC73428B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				722D6B208766F3BD336AECA260A91D5C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F96B600E2217632ABE0AA21FDA82961 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C162F536CE0F40774462B0E393E338BA /* Foundation.framework in Frameworks */,
+				BE7F81C8AEB4B1FF3D8CDC38B61CDC98 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		775369FFD0C909AAEB698C0F54D72D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16B828C2126D819133FE3BEDC7E30AF7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BAA9266EA5CFF240D5361C7CAFD4AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0817B755B9E8100ED8B5AD3879A98834 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1857FE0780DB7553604D881703870D67 /* TweeTextField */ = {
+			isa = PBXGroup;
+			children = (
+				D52A0E2118E2BB58620FFB0011150B35 /* FontAnimation.swift */,
+				A71A7FEFEB22D26B045E7E5D0E794FD2 /* TweeActiveTextField.swift */,
+				03AD77775FF1E54446742F581402CF56 /* TweeAttributedTextField.swift */,
+				087DE1EE1377957768150894411420A7 /* TweeBorderedTextField.swift */,
+				95C1B6EDE1EB141EC71B718655A99CC3 /* TweePlaceholderTextField.swift */,
+				637A9AAC4AFF51EF641371AE6F69903E /* Support Files */,
+			);
+			name = TweeTextField;
+			path = TweeTextField;
+			sourceTree = "<group>";
+		};
+		23349D239DEB61349AD2A36B9F756816 /* Pods-SantanderInvest */ = {
+			isa = PBXGroup;
+			children = (
+				26B88DB507B969464C8B8F81162FE84C /* Info.plist */,
+				CD692113FCF70B85193CB32ED1214DCE /* Pods-SantanderInvest.modulemap */,
+				DE4DFA48A9212C8814C59DF002B56FE6 /* Pods-SantanderInvest-acknowledgements.markdown */,
+				691194A9AA949EB158EB18B78DBDD837 /* Pods-SantanderInvest-acknowledgements.plist */,
+				72686B5A7F5C1A7488B20AA9E35CD81E /* Pods-SantanderInvest-dummy.m */,
+				BB785D47A06D2EAA8422E7FA685E7D54 /* Pods-SantanderInvest-frameworks.sh */,
+				303A5A26F24816F6EA765E51DA424AE7 /* Pods-SantanderInvest-resources.sh */,
+				9C3417F19D58567B50C121C1B505391A /* Pods-SantanderInvest-umbrella.h */,
+				8778E675F7ADDEFE5A0605F2985CBEF7 /* Pods-SantanderInvest.debug.xcconfig */,
+				98F9E07D464013340E37C7D152E8E53C /* Pods-SantanderInvest.release.xcconfig */,
+			);
+			name = "Pods-SantanderInvest";
+			path = "Target Support Files/Pods-SantanderInvest";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E3A22B4F093D05C667D7FB111F7B81D /* Pods-SantanderInvestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB6F7B17586A0CCE6F47529994B34AB7 /* Info.plist */,
+				43AF038AC36FB9BAB21D8CB4DB24CE44 /* Pods-SantanderInvestUITests.modulemap */,
+				B0219A1284B9F9459D4703E83885083C /* Pods-SantanderInvestUITests-acknowledgements.markdown */,
+				90A0EEE90AEA9B81BF9CD8F81016A341 /* Pods-SantanderInvestUITests-acknowledgements.plist */,
+				3B5F57BDA38CE854358F63E90FA5A657 /* Pods-SantanderInvestUITests-dummy.m */,
+				126407F96EF2C638E638FC375FAE54A3 /* Pods-SantanderInvestUITests-frameworks.sh */,
+				6806928D5153DD0FA74598266DC95205 /* Pods-SantanderInvestUITests-resources.sh */,
+				92970F47069CAED5575C471FBB81D95B /* Pods-SantanderInvestUITests-umbrella.h */,
+				25EC597A759A180FC4FDE7537536CBB6 /* Pods-SantanderInvestUITests.debug.xcconfig */,
+				4DD29BB8406BAE6DEA9484132B086DAD /* Pods-SantanderInvestUITests.release.xcconfig */,
+			);
+			name = "Pods-SantanderInvestUITests";
+			path = "Target Support Files/Pods-SantanderInvestUITests";
+			sourceTree = "<group>";
+		};
+		637A9AAC4AFF51EF641371AE6F69903E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2ED362780DDF3E88419832143FF354F8 /* Info.plist */,
+				0ED6786F44900D1A2B692FAC3515369C /* TweeTextField.modulemap */,
+				2A49BEDA99DCFD4628D6D7B58A733EAE /* TweeTextField.xcconfig */,
+				32DF13EF9A891C9B265CA91D87AE6D27 /* TweeTextField-dummy.m */,
+				85299ED7DBAD9C16FE815AEAFA10EDF2 /* TweeTextField-prefix.pch */,
+				C6EDCF49687FC961158C5BFCB242AFD9 /* TweeTextField-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TweeTextField";
+			sourceTree = "<group>";
+		};
+		66A46D9D07AE51FB0DBB7919B4B2730A /* Pods-SantanderInvestTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1D567FCD64339E681CAB17B69EFE096 /* Info.plist */,
+				8165258B7A24870D893D01178041DE15 /* Pods-SantanderInvestTests.modulemap */,
+				6A1C7716D0FEB53CA0B7E916915DE0C0 /* Pods-SantanderInvestTests-acknowledgements.markdown */,
+				B862DE21F06CBC0034873DFD64734608 /* Pods-SantanderInvestTests-acknowledgements.plist */,
+				D70432A4C2CA3DEA92E1CD8A27D04D10 /* Pods-SantanderInvestTests-dummy.m */,
+				58C1229E6AACFA99AB17D851E7DD32A2 /* Pods-SantanderInvestTests-frameworks.sh */,
+				30D05E0BA580D6C2094DFAE9221DA101 /* Pods-SantanderInvestTests-resources.sh */,
+				7C248FBD21047735153ABF5D65A44B3A /* Pods-SantanderInvestTests-umbrella.h */,
+				BE5188D4D84837B405E7F085F8BA2ECA /* Pods-SantanderInvestTests.debug.xcconfig */,
+				31B61477171F5AC7FE00DC319DD02F9B /* Pods-SantanderInvestTests.release.xcconfig */,
+			);
+			name = "Pods-SantanderInvestTests";
+			path = "Target Support Files/Pods-SantanderInvestTests";
+			sourceTree = "<group>";
+		};
+		6705633C6FBA4C87F93C3782006B150E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				185F52FCDC67A083C30D89F02BF60306 /* Pods_SantanderInvest.framework */,
+				2F14611EC5FE59760D771EC52C1EE060 /* Pods_SantanderInvestTests.framework */,
+				082CB86A05DC4C78095BAE974DF146E4 /* Pods_SantanderInvestUITests.framework */,
+				34C6EF1336E7017D938836CCED629885 /* TweeTextField.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69C3626659D248398CF96E0EC51A2E5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1857FE0780DB7553604D881703870D67 /* TweeTextField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				69C3626659D248398CF96E0EC51A2E5D /* Pods */,
+				6705633C6FBA4C87F93C3782006B150E /* Products */,
+				8EAFB45F4DB99F30E2D5A2702C581C3C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8EAFB45F4DB99F30E2D5A2702C581C3C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				23349D239DEB61349AD2A36B9F756816 /* Pods-SantanderInvest */,
+				66A46D9D07AE51FB0DBB7919B4B2730A /* Pods-SantanderInvestTests */,
+				5E3A22B4F093D05C667D7FB111F7B81D /* Pods-SantanderInvestUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		58715CA8E4A1D800E0211DBECF37BAF6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				413BBD70AD49FB4DEF31211F4ADEF2B8 /* Pods-SantanderInvest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5902639B2CC60EB16561D878831C0B5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB372186554928F81BBB0D41E0565E76 /* Pods-SantanderInvestUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E8CBBEEDD859CF468CDAD1F389A6618 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95BEC6ADD6C733E80AF088F3E590683F /* TweeTextField-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A08F227F4D8603A3FD0771B13AE83668 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94A9A142095188B0A52EB3491E4EC8D3 /* Pods-SantanderInvestTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		03C38B2DDD81377171E7F496A9724800 /* Pods-SantanderInvest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF753DA616E78865381FBD92178CCB5A /* Build configuration list for PBXNativeTarget "Pods-SantanderInvest" */;
+			buildPhases = (
+				CDD5AAE834EB4AB58FFA3BD45A2FBB90 /* Sources */,
+				9BAA9266EA5CFF240D5361C7CAFD4AF4 /* Frameworks */,
+				58715CA8E4A1D800E0211DBECF37BAF6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36D2D62DF9EC8E919E415EC2C81E7993 /* PBXTargetDependency */,
+			);
+			name = "Pods-SantanderInvest";
+			productName = "Pods-SantanderInvest";
+			productReference = 185F52FCDC67A083C30D89F02BF60306 /* Pods_SantanderInvest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		836B7001FA05A003BF19DD9776FA2394 /* TweeTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D132F9F6EBE13334878B6AFCF036B65 /* Build configuration list for PBXNativeTarget "TweeTextField" */;
+			buildPhases = (
+				525259FE194C7378B94844AB08F67DA0 /* Sources */,
+				3F96B600E2217632ABE0AA21FDA82961 /* Frameworks */,
+				5E8CBBEEDD859CF468CDAD1F389A6618 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TweeTextField;
+			productName = TweeTextField;
+			productReference = 34C6EF1336E7017D938836CCED629885 /* TweeTextField.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8CC9BF76820EDCCF08FC58055A940057 /* Pods-SantanderInvestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C8CFFD1F910CB79D288D4542EB145B6 /* Build configuration list for PBXNativeTarget "Pods-SantanderInvestUITests" */;
+			buildPhases = (
+				57727D5648E9DEBFA8B295ADEEEDDACB /* Sources */,
+				775369FFD0C909AAEB698C0F54D72D59 /* Frameworks */,
+				5902639B2CC60EB16561D878831C0B5D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61BF7C7A30E2816301A42032A87A50A7 /* PBXTargetDependency */,
+			);
+			name = "Pods-SantanderInvestUITests";
+			productName = "Pods-SantanderInvestUITests";
+			productReference = 082CB86A05DC4C78095BAE974DF146E4 /* Pods_SantanderInvestUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F16ED3E5D0767390BD8E499F35CECA42 /* Pods-SantanderInvestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57D96436AFBDB5E8E790C2BA8F0C1A83 /* Build configuration list for PBXNativeTarget "Pods-SantanderInvestTests" */;
+			buildPhases = (
+				C1BE03361398D3D941C26A1986FC7E7F /* Sources */,
+				3C40C490BB99C60B4CCA34E7BC73428B /* Frameworks */,
+				A08F227F4D8603A3FD0771B13AE83668 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63461CE5C3E822793851F15EDE216E97 /* PBXTargetDependency */,
+			);
+			name = "Pods-SantanderInvestTests";
+			productName = "Pods-SantanderInvestTests";
+			productReference = 2F14611EC5FE59760D771EC52C1EE060 /* Pods_SantanderInvestTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6705633C6FBA4C87F93C3782006B150E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03C38B2DDD81377171E7F496A9724800 /* Pods-SantanderInvest */,
+				F16ED3E5D0767390BD8E499F35CECA42 /* Pods-SantanderInvestTests */,
+				8CC9BF76820EDCCF08FC58055A940057 /* Pods-SantanderInvestUITests */,
+				836B7001FA05A003BF19DD9776FA2394 /* TweeTextField */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		525259FE194C7378B94844AB08F67DA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				470D4054BA971ADABEE1B77C49267BC3 /* FontAnimation.swift in Sources */,
+				3BD5635E50867C9B3140721FE52534F4 /* TweeActiveTextField.swift in Sources */,
+				469DF11F645DF670E409EDC48CBF0A65 /* TweeAttributedTextField.swift in Sources */,
+				3DCDFFB7A1CBCE14AF59ECF1B1339E5E /* TweeBorderedTextField.swift in Sources */,
+				FEF7A7DAC38B96FDDF364096EC75118E /* TweePlaceholderTextField.swift in Sources */,
+				77AE23A329D192809CE8B6394C9C8595 /* TweeTextField-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57727D5648E9DEBFA8B295ADEEEDDACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BD69D93FC2D9E6C523375A8CFC6554A /* Pods-SantanderInvestUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1BE03361398D3D941C26A1986FC7E7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0476392D221F345F4FE28C1D820220 /* Pods-SantanderInvestTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDD5AAE834EB4AB58FFA3BD45A2FBB90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAF10E755EB8DFD8A928672F0CE0785 /* Pods-SantanderInvest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36D2D62DF9EC8E919E415EC2C81E7993 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TweeTextField;
+			target = 836B7001FA05A003BF19DD9776FA2394 /* TweeTextField */;
+			targetProxy = 757CFC19D2A262A8EDE4508B231F3AC0 /* PBXContainerItemProxy */;
+		};
+		61BF7C7A30E2816301A42032A87A50A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SantanderInvest";
+			target = 03C38B2DDD81377171E7F496A9724800 /* Pods-SantanderInvest */;
+			targetProxy = 3DCEBD4FBC80A5042342859CA97F3C38 /* PBXContainerItemProxy */;
+		};
+		63461CE5C3E822793851F15EDE216E97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SantanderInvest";
+			target = 03C38B2DDD81377171E7F496A9724800 /* Pods-SantanderInvest */;
+			targetProxy = DA1835DC003A13A177EC3C9CF7FA2DEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		08C4BA5122FE82C4218CCEE4BE2F7363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD29BB8406BAE6DEA9484132B086DAD /* Pods-SantanderInvestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SantanderInvestUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SantanderInvestUITests/Pods-SantanderInvestUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		11D9D19C66635DA6AE46403D2A69DA8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE5188D4D84837B405E7F085F8BA2ECA /* Pods-SantanderInvestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SantanderInvestTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SantanderInvestTests/Pods-SantanderInvestTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1C80A83745D431F053F04A78825F7274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A49BEDA99DCFD4628D6D7B58A733EAE /* TweeTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TweeTextField/TweeTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TweeTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TweeTextField/TweeTextField.modulemap";
+				PRODUCT_MODULE_NAME = TweeTextField;
+				PRODUCT_NAME = TweeTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		20677694CC8970AE67562575A595F8B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A49BEDA99DCFD4628D6D7B58A733EAE /* TweeTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TweeTextField/TweeTextField-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TweeTextField/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/TweeTextField/TweeTextField.modulemap";
+				PRODUCT_MODULE_NAME = TweeTextField;
+				PRODUCT_NAME = TweeTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		88D713E190D6829EB43D7ABC169C4F12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25EC597A759A180FC4FDE7537536CBB6 /* Pods-SantanderInvestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SantanderInvestUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SantanderInvestUITests/Pods-SantanderInvestUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		943447A07D292B98DCACCE4DB5C4E6C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8778E675F7ADDEFE5A0605F2985CBEF7 /* Pods-SantanderInvest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SantanderInvest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SantanderInvest/Pods-SantanderInvest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BD82C96717278F8C81DDF3AA27D965B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B61477171F5AC7FE00DC319DD02F9B /* Pods-SantanderInvestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SantanderInvestTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SantanderInvestTests/Pods-SantanderInvestTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FC754A6DD1FB64C7FCB0A3FD568974BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98F9E07D464013340E37C7D152E8E53C /* Pods-SantanderInvest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SantanderInvest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SantanderInvest/Pods-SantanderInvest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDB2FC4A1E5891381CD9D922145497F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199D972A13F2B4C56847F7A89CCA83BC /* Debug */,
+				FDB2FC4A1E5891381CD9D922145497F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57D96436AFBDB5E8E790C2BA8F0C1A83 /* Build configuration list for PBXNativeTarget "Pods-SantanderInvestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11D9D19C66635DA6AE46403D2A69DA8B /* Debug */,
+				BD82C96717278F8C81DDF3AA27D965B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C8CFFD1F910CB79D288D4542EB145B6 /* Build configuration list for PBXNativeTarget "Pods-SantanderInvestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D713E190D6829EB43D7ABC169C4F12 /* Debug */,
+				08C4BA5122FE82C4218CCEE4BE2F7363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D132F9F6EBE13334878B6AFCF036B65 /* Build configuration list for PBXNativeTarget "TweeTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20677694CC8970AE67562575A595F8B8 /* Debug */,
+				1C80A83745D431F053F04A78825F7274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF753DA616E78865381FBD92178CCB5A /* Build configuration list for PBXNativeTarget "Pods-SantanderInvest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943447A07D292B98DCACCE4DB5C4E6C3 /* Debug */,
+				FC754A6DD1FB64C7FCB0A3FD568974BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

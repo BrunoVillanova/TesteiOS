@@ -111,3 +111,9 @@ extension ContactFormViewController: UITableViewDataSource {
     return cell!
   }
 }
+
+extension ContactFormViewController: UITableViewDelegate {
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
+  }
+}

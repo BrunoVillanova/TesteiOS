@@ -1,0 +1,6 @@
+framework module Pods_SantanderInvestUITests {
+  umbrella header "Pods-SantanderInvestUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
