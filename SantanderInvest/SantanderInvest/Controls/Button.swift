@@ -9,20 +9,11 @@
 import UIKit
 
 class Button: UIButton {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-  
   
   override public var intrinsicContentSize: CGSize {
     return CGSize(width: self.frame.size.width, height: 50)
   }
-
+  
   // MARK: - Lifecycle
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -38,12 +29,53 @@ class Button: UIButton {
     backgroundColor = Constants.colors.defaultRed
     titleLabel?.font = Constants.fonts.weight.medium.font(size: 16)
     setTitleColor(.white, for: .normal)
-    setTitleColor(.white, for: .focused)
-    setTitleColor(.white, for: .highlighted)
   }
   
   override func layoutSubviews() {
     super.layoutSubviews()
     self.layer.cornerRadius = self.frame.size.height/2.0
+  }
+  
+  
+  // Animation
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    UIView.animate(withDuration: 0.1, animations: { () -> Void in
+      self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+      
+    })
+    super.touchesBegan(touches, with: event)
+    
+  }
+  
+  override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    
+    UIView.animate(withDuration: 0.5,
+                   delay: 0,
+                   usingSpringWithDamping: 0.2,
+                   initialSpringVelocity: 6.0,
+                   options: UIViewAnimationOptions.allowUserInteraction,
+                   animations: { () -> Void in
+                    self.transform = CGAffineTransform.identity
+    }) { (Bool) -> Void in
+      super.touchesCancelled(touches, with: event)
+    }
+    
+  }
+  
+  
+  override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    UIView.animate(withDuration: 0.5,
+                   delay: 0,
+                   usingSpringWithDamping: 0.2,
+                   initialSpringVelocity: 6.0,
+                   options: UIViewAnimationOptions.allowUserInteraction,
+                   animations: { () -> Void in
+                    self.transform = CGAffineTransform.identity
+    }) { (Bool) -> Void in
+      super.touchesEnded(touches, with: event)
+    }
   }
 }
