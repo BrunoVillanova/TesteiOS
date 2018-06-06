@@ -31,8 +31,11 @@ enum FormTableViewCellStyle: Int {
 class FormTableViewCell: UITableViewCell {
   
   var cellStyle: FormTableViewCellStyle?
+  var valueChanged: ((_ formCell:FormCell, _ value:Any?) -> Void)?
+  var currentFormCell: FormCell?
   
   override func prepareForReuse() {
+    currentFormCell = nil
     contentView.subviews.forEach { $0.removeFromSuperview() }
   }
   
@@ -54,6 +57,7 @@ class FormTableViewCell: UITableViewCell {
   
   func configure(_ formCellModel: FormCell) {
     
+    currentFormCell = formCellModel
     let contentView = self.contentView
     let controlContainer = UIView()
     contentView.addSubview(controlContainer)
@@ -121,6 +125,7 @@ class FormTableViewCell: UITableViewCell {
     } else if formCellModel.type == .send {
       let button = Button(frame: .zero)
       button.setTitle(formCellModel.message, for: .normal)
+      button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
       
       let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? CGFloat(formCellModel.topSpacing!) : 0.00
       
@@ -131,6 +136,12 @@ class FormTableViewCell: UITableViewCell {
         make.trailing.equalToSuperview()
         make.bottom.equalToSuperview()
       }
+    }
+  }
+  
+  @objc private func buttonTapped(_ sender: Button) {
+    if let currentFormCell = currentFormCell {
+      valueChanged?(currentFormCell, nil)
     }
   }
 }
