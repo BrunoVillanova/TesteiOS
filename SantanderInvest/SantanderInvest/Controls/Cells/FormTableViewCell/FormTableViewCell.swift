@@ -31,8 +31,20 @@ enum FormTableViewCellStyle: Int {
 class FormTableViewCell: UITableViewCell {
   
   var cellStyle: FormTableViewCellStyle?
-  var valueChanged: ((_ formCell:FormCell, _ value:Any?) -> Void)?
+  var valueChanged: ((_ cell: FormTableViewCell, _ formCell:FormCell, _ value:Any?) -> Void)?
   var currentFormCell: FormCell?
+  var currentControl: UIControl?
+  var isValidValue: Bool? {
+    didSet {
+      if let textField = currentControl as? TweeAttributedTextField {
+        if let isValidValue = isValidValue {
+          textField.activeLineColor = isValidValue ? Constants.colors.success : Constants.colors.error
+        } else {
+          textField.activeLineColor = Constants.colors.lightGray
+        }
+      }
+    }
+  }
   
   override func prepareForReuse() {
     currentFormCell = nil
@@ -71,6 +83,7 @@ class FormTableViewCell: UITableViewCell {
     
     if formCellModel.type == .field {
       let textField = TweeAttributedTextField(frame: .zero)
+      currentControl = textField
       textField.clearButtonMode = .whileEditing
       textField.font = Constants.fonts.weight.medium.font(size: 18)
       textField.textColor = Constants.colors.almostBlack
@@ -92,6 +105,7 @@ class FormTableViewCell: UITableViewCell {
         make.bottom.equalToSuperview()
         make.height.equalTo(47)
       }
+      
     } else if formCellModel.type == .text {
       let textLabel = UILabel(frame: .zero)
       textLabel.font = Constants.fonts.weight.light.font(size: 16)
@@ -110,6 +124,7 @@ class FormTableViewCell: UITableViewCell {
       }
     } else if formCellModel.type == .checkbox {
       let checkBox = CheckBox(frame: .zero)
+      currentControl = checkBox
       checkBox.label.text = formCellModel.message
       checkBox.valueChanged = { (value) in
         print("\(String(describing: formCellModel.message))? \(value)")
@@ -143,13 +158,13 @@ class FormTableViewCell: UITableViewCell {
   
   @objc private func buttonTapped(_ sender: Button) {
     if let currentFormCell = currentFormCell {
-      valueChanged?(currentFormCell, nil)
+      valueChanged?(self, currentFormCell, nil)
     }
   }
   
   @objc private func textFieldValueChanged(_ sender: UITextField) {
     if let currentFormCell = currentFormCell {
-      valueChanged?(currentFormCell, sender.text)
+      valueChanged?(self, currentFormCell, sender.text)
     }
   }
 }
@@ -162,7 +177,7 @@ extension FormTableViewCell: UITextFieldDelegate {
       if let text = textField.text as NSString? {
         updatedText = text.replacingCharacters(in: range, with: string)
       }
-      valueChanged?(currentFormCell, updatedText)
+      valueChanged?(self, currentFormCell, updatedText)
     }
     return true
   }
@@ -170,7 +185,7 @@ extension FormTableViewCell: UITextFieldDelegate {
   func textFieldShouldClear(_ textField: UITextField) -> Bool {
     if let currentFormCell = currentFormCell {
       textField.text = nil
-      valueChanged?(currentFormCell, nil)
+      valueChanged?(self, currentFormCell, nil)
     }
     return true
   }

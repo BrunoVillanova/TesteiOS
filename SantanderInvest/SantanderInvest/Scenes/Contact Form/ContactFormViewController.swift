@@ -108,8 +108,20 @@ extension ContactFormViewController: UITableViewDataSource {
     }
     
     cell!.configure(formCellObject)
-    cell!.valueChanged = { (formCell, value) in
-      print("\(String(describing: formCell.message))? \(value)")
+    cell!.valueChanged = { (cell, formCell, value) in
+  
+      if formCell.type == FormCellType.field, let value = value as? String? {
+        var validValue: Bool?
+        
+        if formCell.typefield == .email {
+          validValue = value?.isValidEmail
+        } else if formCell.typefield == .telNumber {
+          //TODO: Need API fix! Is not parsing this field correctly because API is returning "typefield": "telnumber" instead of value 2 as expected
+          validValue = value?.isValidPhone
+        }
+        
+        cell.isValidValue = validValue
+      }
     }
     
     return cell!
