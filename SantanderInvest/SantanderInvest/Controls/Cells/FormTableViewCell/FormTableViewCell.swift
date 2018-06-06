@@ -79,6 +79,8 @@ class FormTableViewCell: UITableViewCell {
       textField.placeholderColor = Constants.colors.lightGray
       textField.placeholderLabel.font = Constants.fonts.weight.regular.font(size: 16)
       textField.tweePlaceholder = formCellModel.message
+      textField.delegate = self
+      textField.addTarget(self, action: #selector(textFieldValueChanged), for: .valueChanged)
       
       let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? (CGFloat(formCellModel.topSpacing!) + 16.0) : 16.0
       
@@ -143,5 +145,33 @@ class FormTableViewCell: UITableViewCell {
     if let currentFormCell = currentFormCell {
       valueChanged?(currentFormCell, nil)
     }
+  }
+  
+  @objc private func textFieldValueChanged(_ sender: UITextField) {
+    if let currentFormCell = currentFormCell {
+      valueChanged?(currentFormCell, sender.text)
+    }
+  }
+}
+
+extension FormTableViewCell: UITextFieldDelegate {
+  
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    if let currentFormCell = currentFormCell {
+      var updatedText: String?
+      if let text = textField.text as NSString? {
+        updatedText = text.replacingCharacters(in: range, with: string)
+      }
+      valueChanged?(currentFormCell, updatedText)
+    }
+    return true
+  }
+  
+  func textFieldShouldClear(_ textField: UITextField) -> Bool {
+    if let currentFormCell = currentFormCell {
+      textField.text = nil
+      valueChanged?(currentFormCell, nil)
+    }
+    return true
   }
 }

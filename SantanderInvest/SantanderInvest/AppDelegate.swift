@@ -55,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: Constants.fonts.weight.medium.font(size: 16)!,NSAttributedStringKey.foregroundColor: primary]
     UITabBar.appearance().tintColor = .white
     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: Constants.fonts.weight.regular.font(size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal)
-    
+    UITextField.appearance().tintColor = Constants.colors.defaultRed
   }
 }
 

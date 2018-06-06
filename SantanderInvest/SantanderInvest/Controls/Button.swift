@@ -42,18 +42,15 @@ class Button: UIButton {
   
   // Animation
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
+    super.touchesBegan(touches, with: event)
     UIView.animate(withDuration: 0.1, animations: { () -> Void in
       self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
       self.backgroundColor = self.highlightedBackgroundColor
     })
-    super.touchesBegan(touches, with: event)
-    
   }
   
   override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
-    
+    super.touchesCancelled(touches, with: event)
     UIView.animate(withDuration: 0.5,
                    delay: 0,
                    usingSpringWithDamping: 0.2,
@@ -62,15 +59,12 @@ class Button: UIButton {
                    animations: { () -> Void in
                     self.backgroundColor = self.normalBackgroundColor
                     self.transform = CGAffineTransform.identity
-    }) { (Bool) -> Void in
-      super.touchesCancelled(touches, with: event)
-    }
+    })
     
   }
   
-  
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    
+    super.touchesEnded(touches, with: event)
     UIView.animate(withDuration: 0.5,
                    delay: 0,
                    usingSpringWithDamping: 0.2,
@@ -79,8 +73,6 @@ class Button: UIButton {
                    animations: { () -> Void in
                     self.backgroundColor = self.normalBackgroundColor
                     self.transform = CGAffineTransform.identity
-    }) { (Bool) -> Void in
-      super.touchesEnded(touches, with: event)
-    }
+    })
   }
 }

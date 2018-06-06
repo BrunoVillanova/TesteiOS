@@ -261,8 +261,8 @@
 			children = (
 				158C0F1220C7A41C0017C71A /* Button.swift */,
 				158C0F0E20C790F70017C71A /* CheckBox.swift */,
-				15D431BC20C4C76300ECC7FC /* Cells */,
 				152A930720C87C3000A9D6AF /* TabBar.swift */,
+				15D431BC20C4C76300ECC7FC /* Cells */,
 			);
 			path = Controls;
 			sourceTree = "<group>";

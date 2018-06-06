@@ -108,6 +108,10 @@ extension ContactFormViewController: UITableViewDataSource {
     }
     
     cell!.configure(formCellObject)
+    cell!.valueChanged = { (formCell, value) in
+      print("\(String(describing: formCell.message))? \(value)")
+    }
+    
     return cell!
   }
 }
