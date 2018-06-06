@@ -90,6 +90,22 @@ class FormTableViewCell: UITableViewCell {
         make.bottom.equalToSuperview()
         make.height.equalTo(47)
       }
+    } else if formCellModel.type == .text {
+      let textLabel = UILabel(frame: .zero)
+      textLabel.font = UIFont(name: "DINPro-Light", size: 16)
+      textLabel.textColor = Constants.colors.darkGray
+      textLabel.numberOfLines = 0
+      textLabel.text = formCellModel.message
+      
+      let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? CGFloat(formCellModel.topSpacing!) : 0.00
+      
+      controlContainer.addSubview(textLabel)
+      textLabel.snp.makeConstraints { (make) in
+        make.top.equalToSuperview().offset(topSpacing)
+        make.leading.equalToSuperview()
+        make.trailing.equalToSuperview()
+        make.bottom.equalToSuperview()
+      }
     }
   }
 }
