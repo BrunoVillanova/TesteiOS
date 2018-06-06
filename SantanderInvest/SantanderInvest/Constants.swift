@@ -28,5 +28,6 @@ struct Constants {
     static let almostBlack = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
     static let darkDarkGray = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
     static let defaultRed = UIColor(red: 218/255, green: 1/255, blue: 1/255, alpha: 1)
+    static let lightRed = UIColor(red: 235/255, green: 118/255, blue: 118/255, alpha: 1)
   }
 }

@@ -10,6 +10,9 @@ import UIKit
 
 class Button: UIButton {
   
+  var normalBackgroundColor = Constants.colors.defaultRed
+  var highlightedBackgroundColor = Constants.colors.lightRed
+  
   override public var intrinsicContentSize: CGSize {
     return CGSize(width: self.frame.size.width, height: 50)
   }
@@ -26,7 +29,7 @@ class Button: UIButton {
   }
   
   fileprivate func setup() {
-    backgroundColor = Constants.colors.defaultRed
+    backgroundColor = normalBackgroundColor
     titleLabel?.font = Constants.fonts.weight.medium.font(size: 16)
     setTitleColor(.white, for: .normal)
   }
@@ -42,7 +45,7 @@ class Button: UIButton {
     
     UIView.animate(withDuration: 0.1, animations: { () -> Void in
       self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-      
+      self.backgroundColor = self.highlightedBackgroundColor
     })
     super.touchesBegan(touches, with: event)
     
@@ -57,6 +60,7 @@ class Button: UIButton {
                    initialSpringVelocity: 6.0,
                    options: UIViewAnimationOptions.allowUserInteraction,
                    animations: { () -> Void in
+                    self.backgroundColor = self.normalBackgroundColor
                     self.transform = CGAffineTransform.identity
     }) { (Bool) -> Void in
       super.touchesCancelled(touches, with: event)
@@ -73,6 +77,7 @@ class Button: UIButton {
                    initialSpringVelocity: 6.0,
                    options: UIViewAnimationOptions.allowUserInteraction,
                    animations: { () -> Void in
+                    self.backgroundColor = self.normalBackgroundColor
                     self.transform = CGAffineTransform.identity
     }) { (Bool) -> Void in
       super.touchesEnded(touches, with: event)
