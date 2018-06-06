@@ -62,7 +62,7 @@ class FormTableViewCell: UITableViewCell {
       make.top.equalToSuperview()
       make.bottom.equalToSuperview()
       make.centerX.equalToSuperview()
-      make.width.equalTo(295)
+      make.width.equalTo(315)
     }
     
     if formCellModel.type == .field {
@@ -81,8 +81,8 @@ class FormTableViewCell: UITableViewCell {
       controlContainer.addSubview(textField)
       textField.snp.makeConstraints { (make) in
         make.top.equalToSuperview().offset(topSpacing)
-        make.leading.equalToSuperview()
-        make.trailing.equalToSuperview()
+        make.leading.equalToSuperview().offset(20)
+        make.trailing.equalToSuperview().offset(-20)
         make.bottom.equalToSuperview()
         make.height.equalTo(47)
       }
@@ -113,6 +113,19 @@ class FormTableViewCell: UITableViewCell {
       
       controlContainer.addSubview(checkBox)
       checkBox.snp.makeConstraints { (make) in
+        make.top.equalToSuperview().offset(topSpacing)
+        make.leading.equalToSuperview().offset(20)
+        make.trailing.equalToSuperview().offset(-20)
+        make.bottom.equalToSuperview()
+      }
+    } else if formCellModel.type == .send {
+      let button = Button(frame: .zero)
+      button.setTitle(formCellModel.message, for: .normal)
+      
+      let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? CGFloat(formCellModel.topSpacing!) : 0.00
+      
+      controlContainer.addSubview(button)
+      button.snp.makeConstraints { (make) in
         make.top.equalToSuperview().offset(topSpacing)
         make.leading.equalToSuperview()
         make.trailing.equalToSuperview()

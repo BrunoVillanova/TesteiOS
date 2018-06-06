@@ -24,14 +24,15 @@
 		156CB70D20BE4DC2001DB3C7 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB70C20BE4DC2001DB3C7 /* CustomNavigationController.swift */; };
 		158C0F0C20C77CFE0017C71A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F0B20C77CFE0017C71A /* Constants.swift */; };
 		158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F0E20C790F70017C71A /* CheckBox.swift */; };
-		158C0F1120C79A4B0017C71A /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 158C0F1020C79A4B0017C71A /* DINPro-Light.otf */; };
+		158C0F1320C7A41C0017C71A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F1220C7A41C0017C71A /* Button.swift */; };
+		158C0F1720C7A6050017C71A /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 158C0F1620C7A6040017C71A /* DINPro-Light.otf */; };
+		158C0F1A20C7A62C0017C71A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F1920C7A62C0017C71A /* StringExtensions.swift */; };
 		15D431BB20C4C74200ECC7FC /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431BA20C4C74200ECC7FC /* FormTableViewCell.swift */; };
 		15D431C420C4D1A200ECC7FC /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431C320C4D1A200ECC7FC /* FormCell.swift */; };
 		15D431CC20C5131500ECC7FC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D431CB20C5131500ECC7FC /* Alamofire.framework */; };
 		15D431CE20C5AE7E00ECC7FC /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D431CD20C5AE7E00ECC7FC /* AlamofireObjectMapper.framework */; };
 		15D431D020C5AEE600ECC7FC /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D431CF20C5AEE600ECC7FC /* ObjectMapper.framework */; };
 		15D431D620C628EA00ECC7FC /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D431D420C628EA00ECC7FC /* SnapKit.framework */; };
-		15D431D920C62A6700ECC7FC /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431D820C62A6700ECC7FC /* StringExtensions.swift */; };
 		433763E4A9BDE8B528B1D6D2 /* Pods_SantanderInvestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6CA1479D0139C1B45D13DF /* Pods_SantanderInvestUITests.framework */; };
 		5A92C3CF4BA4ABDD9F851904 /* Pods_SantanderInvestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67035F3FD2F8A06BF604BBB6 /* Pods_SantanderInvestTests.framework */; };
 		E651EBB7553D996E13AE7839 /* Pods_SantanderInvest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DCA6585BBF4800CABDFCC /* Pods_SantanderInvest.framework */; };
@@ -78,7 +79,9 @@
 		156CB70C20BE4DC2001DB3C7 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		158C0F0B20C77CFE0017C71A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		158C0F0E20C790F70017C71A /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
-		158C0F1020C79A4B0017C71A /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Light.otf"; path = "../../../../20. Din     [1926 - Ludwig Goller]/DINPro-Light.otf"; sourceTree = "<group>"; };
+		158C0F1220C7A41C0017C71A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		158C0F1620C7A6040017C71A /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
+		158C0F1920C7A62C0017C71A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		15D431BA20C4C74200ECC7FC /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		15D431C320C4D1A200ECC7FC /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		15D431CB20C5131500ECC7FC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		15D431CF20C5AEE600ECC7FC /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		15D431D320C628EA00ECC7FC /* TweeTextField_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TweeTextField_iOS.framework; path = Carthage/Build/iOS/TweeTextField_iOS.framework; sourceTree = "<group>"; };
 		15D431D420C628EA00ECC7FC /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
-		15D431D820C62A6700ECC7FC /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		2B6CA1479D0139C1B45D13DF /* Pods_SantanderInvestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SantanderInvestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F1C9AD20EB4228E54383AF2 /* Pods-SantanderInvestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantanderInvestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SantanderInvestUITests/Pods-SantanderInvestUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3032719F50FA6134AE04F57D /* Pods-SantanderInvestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SantanderInvestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SantanderInvestTests/Pods-SantanderInvestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,11 +157,11 @@
 		156CB6A820BDCEEA001DB3C7 /* SantanderInvest */ = {
 			isa = PBXGroup;
 			children = (
-				15D431D720C62A4B00ECC7FC /* Extensions */,
-				15D431C220C4D19000ECC7FC /* Models */,
 				15D431B720C4C6EB00ECC7FC /* Controls */,
 				156CB70B20BE4D23001DB3C7 /* Controllers */,
 				156CB6F820BE21EB001DB3C7 /* Scenes */,
+				15D431C220C4D19000ECC7FC /* Models */,
+				158C0F1820C7A62C0017C71A /* Extentions */,
 				156CB6F620BE2180001DB3C7 /* Resources */,
 				156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */,
 				158C0F0B20C77CFE0017C71A /* Constants.swift */,
@@ -229,9 +231,9 @@
 		156CB70620BE49E6001DB3C7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				158C0F1620C7A6040017C71A /* DINPro-Light.otf */,
 				156CB70820BE4A2B001DB3C7 /* DINPro-Medium.otf */,
 				156CB70720BE4A2B001DB3C7 /* DINPro-Regular.otf */,
-				158C0F1020C79A4B0017C71A /* DINPro-Light.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -244,18 +246,19 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		158C0F0D20C790C50017C71A /* CheckBox */ = {
+		158C0F1820C7A62C0017C71A /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				158C0F0E20C790F70017C71A /* CheckBox.swift */,
+				158C0F1920C7A62C0017C71A /* StringExtensions.swift */,
 			);
-			path = CheckBox;
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		15D431B720C4C6EB00ECC7FC /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				158C0F0D20C790C50017C71A /* CheckBox */,
+				158C0F1220C7A41C0017C71A /* Button.swift */,
+				158C0F0E20C790F70017C71A /* CheckBox.swift */,
 				15D431BC20C4C76300ECC7FC /* Cells */,
 			);
 			path = Controls;
@@ -298,15 +301,6 @@
 				2B6CA1479D0139C1B45D13DF /* Pods_SantanderInvestUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		15D431D720C62A4B00ECC7FC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				15D431D820C62A6700ECC7FC /* StringExtensions.swift */,
-			);
-			name = Extensions;
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4CCA39C09C71983B2D57B4DD /* Pods */ = {
@@ -433,7 +427,7 @@
 			files = (
 				156CB70920BE4A2B001DB3C7 /* DINPro-Regular.otf in Resources */,
 				156CB6B420BDCEEB001DB3C7 /* LaunchScreen.storyboard in Resources */,
-				158C0F1120C79A4B0017C71A /* DINPro-Light.otf in Resources */,
+				158C0F1720C7A6050017C71A /* DINPro-Light.otf in Resources */,
 				156CB6B120BDCEEB001DB3C7 /* Assets.xcassets in Resources */,
 				156CB6AF20BDCEEA001DB3C7 /* Main.storyboard in Resources */,
 				156CB70A20BE4A2B001DB3C7 /* DINPro-Medium.otf in Resources */,
@@ -558,16 +552,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D431D920C62A6700ECC7FC /* StringExtensions.swift in Sources */,
 				156CB70120BE31B1001DB3C7 /* ContactFormWorker.swift in Sources */,
 				156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */,
 				15D431BB20C4C74200ECC7FC /* FormTableViewCell.swift in Sources */,
 				156CB70020BE31B1001DB3C7 /* ContactFormPresenter.swift in Sources */,
 				156CB70520BE31B1001DB3C7 /* ContactFormInteractor.swift in Sources */,
 				156CB70D20BE4DC2001DB3C7 /* CustomNavigationController.swift in Sources */,
+				158C0F1320C7A41C0017C71A /* Button.swift in Sources */,
 				156CB70420BE31B1001DB3C7 /* ContactFormViewController.swift in Sources */,
 				156CB70320BE31B1001DB3C7 /* ContactFormModels.swift in Sources */,
 				15D431C420C4D1A200ECC7FC /* FormCell.swift in Sources */,
+				158C0F1A20C7A62C0017C71A /* StringExtensions.swift in Sources */,
 				156CB70220BE31B1001DB3C7 /* ContactFormRouter.swift in Sources */,
 				158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */,
 				158C0F0C20C77CFE0017C71A /* Constants.swift in Sources */,
