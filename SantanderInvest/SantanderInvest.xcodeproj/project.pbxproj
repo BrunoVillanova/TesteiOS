@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152A930820C87C3000A9D6AF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152A930720C87C3000A9D6AF /* TabBar.swift */; };
 		156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */; };
 		156CB6AF20BDCEEA001DB3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6AD20BDCEEA001DB3C7 /* Main.storyboard */; };
 		156CB6B120BDCEEB001DB3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */; };
@@ -26,7 +27,7 @@
 		158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F0E20C790F70017C71A /* CheckBox.swift */; };
 		158C0F1320C7A41C0017C71A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F1220C7A41C0017C71A /* Button.swift */; };
 		158C0F1720C7A6050017C71A /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 158C0F1620C7A6040017C71A /* DINPro-Light.otf */; };
-		158C0F1A20C7A62C0017C71A /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F1920C7A62C0017C71A /* StringExtensions.swift */; };
+		158C0F1A20C7A62C0017C71A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F1920C7A62C0017C71A /* Extensions.swift */; };
 		15D431BB20C4C74200ECC7FC /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431BA20C4C74200ECC7FC /* FormTableViewCell.swift */; };
 		15D431C420C4D1A200ECC7FC /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431C320C4D1A200ECC7FC /* FormCell.swift */; };
 		15D431CC20C5131500ECC7FC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D431CB20C5131500ECC7FC /* Alamofire.framework */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152A930720C87C3000A9D6AF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		156CB6A620BDCEEA001DB3C7 /* SantanderInvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantanderInvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		156CB6AE20BDCEEA001DB3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		158C0F0E20C790F70017C71A /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		158C0F1220C7A41C0017C71A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		158C0F1620C7A6040017C71A /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Light.otf"; sourceTree = "<group>"; };
-		158C0F1920C7A62C0017C71A /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		158C0F1920C7A62C0017C71A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		15D431BA20C4C74200ECC7FC /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		15D431C320C4D1A200ECC7FC /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		15D431CB20C5131500ECC7FC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -249,7 +251,7 @@
 		158C0F1820C7A62C0017C71A /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				158C0F1920C7A62C0017C71A /* StringExtensions.swift */,
+				158C0F1920C7A62C0017C71A /* Extensions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -260,6 +262,7 @@
 				158C0F1220C7A41C0017C71A /* Button.swift */,
 				158C0F0E20C790F70017C71A /* CheckBox.swift */,
 				15D431BC20C4C76300ECC7FC /* Cells */,
+				152A930720C87C3000A9D6AF /* TabBar.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -327,8 +330,8 @@
 				156CB6A220BDCEEA001DB3C7 /* Sources */,
 				156CB6A320BDCEEA001DB3C7 /* Frameworks */,
 				156CB6A420BDCEEA001DB3C7 /* Resources */,
-				15D431C920C5121000ECC7FC /* Copy Carthage Built Frameworks */,
 				CC18A7A98151685E058E91A5 /* [CP] Embed Pods Frameworks */,
+				15D431C920C5121000ECC7FC /* Copy Carthage Built Frameworks */,
 			);
 			buildRules = (
 			);
@@ -554,6 +557,7 @@
 			files = (
 				156CB70120BE31B1001DB3C7 /* ContactFormWorker.swift in Sources */,
 				156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */,
+				152A930820C87C3000A9D6AF /* TabBar.swift in Sources */,
 				15D431BB20C4C74200ECC7FC /* FormTableViewCell.swift in Sources */,
 				156CB70020BE31B1001DB3C7 /* ContactFormPresenter.swift in Sources */,
 				156CB70520BE31B1001DB3C7 /* ContactFormInteractor.swift in Sources */,
@@ -562,7 +566,7 @@
 				156CB70420BE31B1001DB3C7 /* ContactFormViewController.swift in Sources */,
 				156CB70320BE31B1001DB3C7 /* ContactFormModels.swift in Sources */,
 				15D431C420C4D1A200ECC7FC /* FormCell.swift in Sources */,
-				158C0F1A20C7A62C0017C71A /* StringExtensions.swift in Sources */,
+				158C0F1A20C7A62C0017C71A /* Extensions.swift in Sources */,
 				156CB70220BE31B1001DB3C7 /* ContactFormRouter.swift in Sources */,
 				158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */,
 				158C0F0C20C77CFE0017C71A /* Constants.swift in Sources */,
