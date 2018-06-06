@@ -56,7 +56,6 @@ class FormTableViewCell: UITableViewCell {
     
     let contentView = self.contentView
     let controlContainer = UIView()
-//    controlContainer.translatesAutoresizingMaskIntoConstraints = false
     contentView.addSubview(controlContainer)
     
     controlContainer.snp.makeConstraints { (make) in
@@ -68,16 +67,13 @@ class FormTableViewCell: UITableViewCell {
     
     if formCellModel.type == .field {
       let textField = TweeAttributedTextField(frame: .zero)
-//      textField.infoLabel.font = UIFont(name: "DINPro-Regular", size: 16)
-//      textField.infoLabel.textColor = Constants.colors.lightGray
-//      textField.infoTextColor = Constants.colors.lightGray
       textField.clearButtonMode = .whileEditing
-      textField.font = UIFont(name: "DINPro-Medium", size: 18)
+      textField.font = Constants.fonts.weight.medium.font(size: 18)
       textField.textColor = Constants.colors.almostBlack
       textField.lineColor = Constants.colors.veryLightGray
       textField.activeLineColor = Constants.colors.lightGray
       textField.placeholderColor = Constants.colors.lightGray
-      textField.placeholderLabel.font = UIFont(name: "DINPro-Regular", size: 16)
+      textField.placeholderLabel.font = Constants.fonts.weight.regular.font(size: 16)
       textField.tweePlaceholder = formCellModel.message
       
       let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? (CGFloat(formCellModel.topSpacing!) + 16.0) : 16.0
@@ -92,7 +88,7 @@ class FormTableViewCell: UITableViewCell {
       }
     } else if formCellModel.type == .text {
       let textLabel = UILabel(frame: .zero)
-      textLabel.font = UIFont(name: "DINPro-Light", size: 16)
+      textLabel.font = Constants.fonts.weight.light.font(size: 16)
       textLabel.textColor = Constants.colors.darkGray
       textLabel.numberOfLines = 0
       textLabel.text = formCellModel.message
@@ -101,6 +97,22 @@ class FormTableViewCell: UITableViewCell {
       
       controlContainer.addSubview(textLabel)
       textLabel.snp.makeConstraints { (make) in
+        make.top.equalToSuperview().offset(topSpacing)
+        make.leading.equalToSuperview()
+        make.trailing.equalToSuperview()
+        make.bottom.equalToSuperview()
+      }
+    } else if formCellModel.type == .checkbox {
+      let checkBox = CheckBox(frame: .zero)
+      checkBox.label.text = formCellModel.message
+      checkBox.valueChanged = { (value) in
+        print("\(String(describing: formCellModel.message))? \(value)")
+      }
+      
+      let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? CGFloat(formCellModel.topSpacing!) : 0.00
+      
+      controlContainer.addSubview(checkBox)
+      checkBox.snp.makeConstraints { (make) in
         make.top.equalToSuperview().offset(topSpacing)
         make.leading.equalToSuperview()
         make.trailing.equalToSuperview()

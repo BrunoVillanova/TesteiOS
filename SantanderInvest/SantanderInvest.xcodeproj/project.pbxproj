@@ -23,6 +23,8 @@
 		156CB70A20BE4A2B001DB3C7 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 156CB70820BE4A2B001DB3C7 /* DINPro-Medium.otf */; };
 		156CB70D20BE4DC2001DB3C7 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB70C20BE4DC2001DB3C7 /* CustomNavigationController.swift */; };
 		158C0F0C20C77CFE0017C71A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F0B20C77CFE0017C71A /* Constants.swift */; };
+		158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158C0F0E20C790F70017C71A /* CheckBox.swift */; };
+		158C0F1120C79A4B0017C71A /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 158C0F1020C79A4B0017C71A /* DINPro-Light.otf */; };
 		15D431BB20C4C74200ECC7FC /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431BA20C4C74200ECC7FC /* FormTableViewCell.swift */; };
 		15D431C420C4D1A200ECC7FC /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D431C320C4D1A200ECC7FC /* FormCell.swift */; };
 		15D431CC20C5131500ECC7FC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D431CB20C5131500ECC7FC /* Alamofire.framework */; };
@@ -75,6 +77,8 @@
 		156CB70820BE4A2B001DB3C7 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINPro-Medium.otf"; sourceTree = "<group>"; };
 		156CB70C20BE4DC2001DB3C7 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		158C0F0B20C77CFE0017C71A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		158C0F0E20C790F70017C71A /* CheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		158C0F1020C79A4B0017C71A /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Light.otf"; path = "../../../../20. Din     [1926 - Ludwig Goller]/DINPro-Light.otf"; sourceTree = "<group>"; };
 		15D431BA20C4C74200ECC7FC /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		15D431C320C4D1A200ECC7FC /* FormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
 		15D431CB20C5131500ECC7FC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -227,6 +231,7 @@
 			children = (
 				156CB70820BE4A2B001DB3C7 /* DINPro-Medium.otf */,
 				156CB70720BE4A2B001DB3C7 /* DINPro-Regular.otf */,
+				158C0F1020C79A4B0017C71A /* DINPro-Light.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -239,9 +244,18 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		158C0F0D20C790C50017C71A /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				158C0F0E20C790F70017C71A /* CheckBox.swift */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
 		15D431B720C4C6EB00ECC7FC /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				158C0F0D20C790C50017C71A /* CheckBox */,
 				15D431BC20C4C76300ECC7FC /* Cells */,
 			);
 			path = Controls;
@@ -419,6 +433,7 @@
 			files = (
 				156CB70920BE4A2B001DB3C7 /* DINPro-Regular.otf in Resources */,
 				156CB6B420BDCEEB001DB3C7 /* LaunchScreen.storyboard in Resources */,
+				158C0F1120C79A4B0017C71A /* DINPro-Light.otf in Resources */,
 				156CB6B120BDCEEB001DB3C7 /* Assets.xcassets in Resources */,
 				156CB6AF20BDCEEA001DB3C7 /* Main.storyboard in Resources */,
 				156CB70A20BE4A2B001DB3C7 /* DINPro-Medium.otf in Resources */,
@@ -554,6 +569,7 @@
 				156CB70320BE31B1001DB3C7 /* ContactFormModels.swift in Sources */,
 				15D431C420C4D1A200ECC7FC /* FormCell.swift in Sources */,
 				156CB70220BE31B1001DB3C7 /* ContactFormRouter.swift in Sources */,
+				158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */,
 				158C0F0C20C77CFE0017C71A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
