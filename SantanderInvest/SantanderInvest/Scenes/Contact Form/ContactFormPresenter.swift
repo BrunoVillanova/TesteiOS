@@ -15,6 +15,7 @@ import UIKit
 protocol ContactFormPresentationLogic
 {
   func presentContactForm(response: ContactForm.FetchCells.Response)
+  func presentInvalidFormCells(response: ContactForm.UpdateContactForm.Response)
 }
 
 class ContactFormPresenter: ContactFormPresentationLogic
@@ -32,5 +33,10 @@ class ContactFormPresenter: ContactFormPresentationLogic
     
     let viewModel = ContactForm.FetchCells.ViewModel(formCells: contactFormCells)
     viewController?.displayFormCells(viewModel: viewModel)
+  }
+  
+  func presentInvalidFormCells(response: ContactForm.UpdateContactForm.Response) {
+    let viewModel = ContactForm.UpdateContactForm.ViewModel(formCells: response.cells)
+    viewController?.displayInvalidFormCells(viewModel: viewModel)
   }
 }

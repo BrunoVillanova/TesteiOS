@@ -15,16 +15,16 @@ import UIKit
 protocol ContactFormDisplayLogic: class
 {
   func displayFormCells(viewModel: ContactForm.FetchCells.ViewModel)
+  func displayInvalidFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel)
 }
 
-class ContactFormViewController: UIViewController, ContactFormDisplayLogic
+class ContactFormViewController: UIViewController
 {
   
   @IBOutlet weak var tableView: UITableView!
   
   var interactor: ContactFormBusinessLogic?
   var router: (NSObjectProtocol & ContactFormRoutingLogic & ContactFormDataPassing)?
-  var cells = [FormCell]()
 
   // MARK: Object lifecycle
   
@@ -76,6 +76,19 @@ class ContactFormViewController: UIViewController, ContactFormDisplayLogic
     fetchFormCells()
   }
   
+  fileprivate func sendContactForm() {
+    let request = ContactForm.SendContactForm.Request()
+    interactor?.sendContactForm(request: request)
+  }
+  
+  fileprivate func updateContactFormField(_ fieldId: Int, value: String?) {
+    let contactFormFields = [ContactForm.ContactFormField(fieldId: fieldId, value: value)]
+    let request = ContactForm.UpdateContactForm.Request(contactFormFields: contactFormFields)
+    interactor?.updateContactForm(request: request)
+  }
+}
+
+extension ContactFormViewController: ContactFormDisplayLogic {
   // MARK: Fetch Cells
   
   func fetchFormCells()
@@ -83,21 +96,39 @@ class ContactFormViewController: UIViewController, ContactFormDisplayLogic
     let request = ContactForm.FetchCells.Request()
     interactor?.fetchFormCells(request: request)
   }
-
+  
   func displayFormCells(viewModel: ContactForm.FetchCells.ViewModel) {
-    self.cells = viewModel.formCells
     tableView.reloadData()
+  }
+  
+  func displayInvalidFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel) {
+    let formCells = viewModel.formCells
+    let invalidFormCellsIDs = formCells.map { $0.id! }
+    tableView.visibleCells.forEach { (cell) in
+      if let cell = cell as? FormTableViewCell, let formCell = cell.currentFormCell {
+        if invalidFormCellsIDs.contains(formCell.id!) {
+          cell.shake()
+        }
+      }
+    }
   }
 }
 
 extension ContactFormViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return cells.count
+    if let interactor = interactor {
+      return interactor.formCells.count
+    }
+    return 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let formCellObject = cells[indexPath.row]
+    guard let interactor = interactor else {
+      return UITableViewCell(frame: .zero)
+    }
+    
+    let formCellObject = interactor.formCells[indexPath.row]
     let formCellStyle = FormTableViewCellStyle(rawValue: formCellObject.type!.rawValue)!
     let cellReuseIdentifier = formCellStyle.reuseIdentifier
     var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as? FormTableViewCell
@@ -109,7 +140,15 @@ extension ContactFormViewController: UITableViewDataSource {
     
     cell!.configure(formCellObject)
     cell!.valueChanged = { (cell, formCell, value) in
-  
+      
+      var theValue: String? = nil
+      
+      if let value = value as? String {
+        theValue = value
+      }
+      
+      self.updateContactFormField(formCell.id!, value: theValue)
+      
       if formCell.type == FormCellType.field, let value = value as? String? {
         var validValue: Bool?
         
@@ -121,6 +160,8 @@ extension ContactFormViewController: UITableViewDataSource {
         }
         
         cell.isValidValue = validValue
+      } else if formCell.type == .send {
+        self.sendContactForm()
       }
     }
     

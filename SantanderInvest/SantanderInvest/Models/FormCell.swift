@@ -15,6 +15,15 @@ enum FormCellType: Int {
        image = 3,
        checkbox = 4,
        send = 5
+  
+  var editable: Bool {
+    switch self {
+    case .field, .checkbox:
+      return true
+    default:
+      return false
+    }
+  }
 }
 
 enum FieldType: Int {
@@ -34,6 +43,7 @@ struct CellsResponse: Mappable {
 }
 
 struct FormCell: Mappable {
+  
   var id: Int?
   var type: FormCellType?
   var message: String?
@@ -42,6 +52,14 @@ struct FormCell: Mappable {
   var topSpacing: Float?
   var show: Int?
   var required: Bool?
+  var editable: Bool {
+    get {
+      if let type = self.type {
+        return type.editable
+      }
+      return false
+    }
+  }
   
   init?(map: Map) {}
   

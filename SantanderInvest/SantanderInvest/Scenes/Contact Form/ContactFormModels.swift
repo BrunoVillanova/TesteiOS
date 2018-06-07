@@ -14,7 +14,11 @@ import UIKit
 
 enum ContactForm
 {
-  // MARK: Use cases
+  
+  struct ContactFormField {
+    var fieldId: Int
+    var value: String?
+  }
   
   enum FetchCells
   {
@@ -28,7 +32,32 @@ enum ContactForm
     }
     struct ViewModel
     {
-        var formCells: [FormCell]
+      var formCells: [FormCell]
+    }
+  }
+  
+  enum SendContactForm {
+    struct Request {
+    }
+    struct Response {
+      var success: Bool?
+    }
+    struct ViewModel
+    {
+      var formCells: [FormCell]
+    }
+  }
+  
+  enum UpdateContactForm {
+    struct Request {
+      var contactFormFields: [ContactFormField]
+    }
+    struct Response {
+      var cells: [FormCell]
+    }
+    struct ViewModel
+    {
+      var formCells: [FormCell]
     }
   }
 }
