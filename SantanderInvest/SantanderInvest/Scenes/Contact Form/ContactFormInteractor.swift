@@ -51,11 +51,12 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
     let contactFormFieldsIDs = Set(contactFormFields.map { $0.fieldId })
     
     let foundRequiredFieldsIDs = contactFormFieldsIDs.intersection(requiredEditableFieldsIDs)
-    let notFoundRequiredFieldsIDs = requiredEditableFieldsIDs.subtracting(contactFormFieldsIDs)
+    let notFoundRequiredFieldsIDs = requiredEditableFieldsIDs.subtracting(foundRequiredFieldsIDs)
     var invalidFieldsIDs = notFoundRequiredFieldsIDs
     
     for foundRequiredFieldID in foundRequiredFieldsIDs {
       let foundRequiredField = formCells.first { $0.id == foundRequiredFieldID }
+      
       if let typeField = foundRequiredField?.typefield {
         
         var isValid = false

@@ -67,10 +67,33 @@ struct FormCell: Mappable {
     id <- map["id"]
     type <- map["type"]
     message <- map["message"]
-    typefield <- map["typefield"]
+    typefield <- (map["typefield"], FieldTypeTransform())
     hidden <- map["hidden"]
     topSpacing <- map["topSpacing"]
     show <- map["show"]
     required <- map["required"]
   }
 }
+
+class FieldTypeTransform: TransformType {
+  
+  public typealias Object = FieldType
+  public typealias JSON = [[String:Any]]
+  
+  func transformToJSON(_ value: FieldType?) -> [[String : Any]]? {
+    return nil
+  }
+  
+  // This is a fix to API bug returning string instead of int in field type
+  func transformFromJSON(_ value: Any?) -> FieldType? {
+    if let fieldType = value as? Int {
+      return FieldType(rawValue: fieldType)
+    } else if let fieldType = value as? String {
+      if fieldType == "telnumber" {
+        return FieldType.telNumber
+      }
+    }
+    return nil
+  }
+}
+
