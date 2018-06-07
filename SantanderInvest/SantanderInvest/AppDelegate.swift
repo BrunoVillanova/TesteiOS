@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let primary = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
     UINavigationBar.appearance().backgroundColor = .white
     UINavigationBar.appearance().barTintColor = .white
+    UINavigationBar.appearance().tintColor = Constants.colors.defaultRed
     UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.font: Constants.fonts.weight.medium.font(size: 16)!,NSAttributedStringKey.foregroundColor: primary]
     UITabBar.appearance().tintColor = .white
     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: Constants.fonts.weight.regular.font(size: 16)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: .normal)

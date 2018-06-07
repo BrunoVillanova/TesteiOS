@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		152A930820C87C3000A9D6AF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152A930720C87C3000A9D6AF /* TabBar.swift */; };
 		152A930A20C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152A930920C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework */; };
+		152A930C20C9E60500A9D6AF /* ContactFormSentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152A930B20C9E60500A9D6AF /* ContactFormSentViewController.swift */; };
 		156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */; };
 		156CB6AF20BDCEEA001DB3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6AD20BDCEEA001DB3C7 /* Main.storyboard */; };
 		156CB6B120BDCEEB001DB3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		152A930720C87C3000A9D6AF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		152A930920C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
+		152A930B20C9E60500A9D6AF /* ContactFormSentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFormSentViewController.swift; sourceTree = "<group>"; };
 		156CB6A620BDCEEA001DB3C7 /* SantanderInvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantanderInvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		156CB6AE20BDCEEA001DB3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				156CB70C20BE4DC2001DB3C7 /* CustomNavigationController.swift */,
+				152A930B20C9E60500A9D6AF /* ContactFormSentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				156CB70220BE31B1001DB3C7 /* ContactFormRouter.swift in Sources */,
 				158C0F0F20C790F70017C71A /* CheckBox.swift in Sources */,
 				158C0F0C20C77CFE0017C71A /* Constants.swift in Sources */,
+				152A930C20C9E60500A9D6AF /* ContactFormSentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

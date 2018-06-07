@@ -129,34 +129,17 @@ extension ContactFormViewController: ContactFormDisplayLogic {
   // MARK: Display logic
   func displayUpdatedFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel) {
     tableView.beginUpdates()
-//    if let interactor = interactor, interactor.formCells.count !== viewModel.formCells.count {
-//    
-//    }
-//    if viewModel.dataEvent.rowDeletes.count > 0 {
-//      tableView.deleteRows(at: viewModel.dataEvent.rowDeletes, with: .automatic)
-//    }
-//    if viewModel.dataEvent.rowInserts.count > 0 {
-//      tableView.insertRows(at: viewModel.dataEvent.rowInserts, with: .automatic)
-//    }
-//    if viewModel.dataEvent.rowUpdates.count > 0 {
-//      tableView.reloadRows(at: viewModel.dataEvent.rowUpdates, with: .automatic)
-//    }
-//    if viewModel.dataEvent.sectionDeletes.count > 0 {
-//      tableView.deleteSections(IndexSet(viewModel.dataEvent.sectionDeletes), with: .automatic)
-//    }
-//    if viewModel.dataEvent.sectionChanges.count > 0 {
-//      tableView.reloadSections(IndexSet(viewModel.dataEvent.sectionDeletes), with: .automatic)
-//    }
-//    if viewModel.dataEvent.sectionInserts.count > 0 {
-//      tableView.insertSections(IndexSet(viewModel.dataEvent.sectionInserts), with: .automatic)
-//    }
+
     tableView.endUpdates()
   }
   
   // MARK: Display Form Sending Success
   
   func displaySuccessSendingContactForm() {
-//    router.navigateToItemsInCategoryScene()
+    
+    if let vc = storyboard?.instantiateViewController(withIdentifier: "ContactFormSent") {
+      navigationController?.push(viewController: vc)
+    }
   }
 }
 

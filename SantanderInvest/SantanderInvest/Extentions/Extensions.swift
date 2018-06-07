@@ -44,3 +44,42 @@ extension UIView {
     layer.add(animation, forKey: "shake")
   }
 }
+
+///
+/// Navigation Controller Fade In/Out Transition
+/// Credits to Luca Davanzo on StackOverflow: https://stackoverflow.com/questions/2215672/how-to-change-the-push-and-pop-animations-in-a-navigation-based-app
+///
+extension UINavigationController {
+  
+  /**
+   Pop current view controller to previous view controller.
+   
+   - parameter type:     transition animation type.
+   - parameter duration: transition animation duration.
+   */
+  func pop(transitionType type: String = kCATransitionFade, duration: CFTimeInterval = 0.3) {
+    self.addTransition(transitionType: type, duration: duration)
+    self.popViewController(animated: false)
+  }
+  
+  /**
+   Push a new view controller on the view controllers's stack.
+   
+   - parameter vc:       view controller to push.
+   - parameter type:     transition animation type.
+   - parameter duration: transition animation duration.
+   */
+  func push(viewController vc: UIViewController, transitionType type: String = kCATransitionFade, duration: CFTimeInterval = 0.3) {
+    self.addTransition(transitionType: type, duration: duration)
+    self.pushViewController(vc, animated: false)
+  }
+  
+  func addTransition(transitionType type: String = kCATransitionFade, duration: CFTimeInterval = 0.3) {
+    let transition = CATransition()
+    transition.duration = duration
+    transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+    transition.type = type
+    self.view.layer.add(transition, forKey: nil)
+  }
+  
+}
