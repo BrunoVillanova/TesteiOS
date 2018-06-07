@@ -1,4 +1,4 @@
 github "Alamofire/Alamofire" ~> 4.7
 github "tristanhimmelman/AlamofireObjectMapper" ~> 5.0
 github "SnapKit/SnapKit" ~> 4.0.0
-
+github "hackiftekhar/IQKeyboardManager"

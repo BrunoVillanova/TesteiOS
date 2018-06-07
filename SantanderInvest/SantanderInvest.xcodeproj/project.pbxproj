@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		152A930820C87C3000A9D6AF /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152A930720C87C3000A9D6AF /* TabBar.swift */; };
+		152A930A20C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 152A930920C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework */; };
 		156CB6AA20BDCEEA001DB3C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */; };
 		156CB6AF20BDCEEA001DB3C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6AD20BDCEEA001DB3C7 /* Main.storyboard */; };
 		156CB6B120BDCEEB001DB3C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 156CB6B020BDCEEB001DB3C7 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		152A930720C87C3000A9D6AF /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		152A930920C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IQKeyboardManagerSwift.framework; path = Carthage/Build/iOS/IQKeyboardManagerSwift.framework; sourceTree = "<group>"; };
 		156CB6A620BDCEEA001DB3C7 /* SantanderInvest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SantanderInvest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		156CB6A920BDCEEA001DB3C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		156CB6AE20BDCEEA001DB3C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				15D431CE20C5AE7E00ECC7FC /* AlamofireObjectMapper.framework in Frameworks */,
 				15D431D020C5AEE600ECC7FC /* ObjectMapper.framework in Frameworks */,
 				15D431D620C628EA00ECC7FC /* SnapKit.framework in Frameworks */,
+				152A930A20C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework in Frameworks */,
 				E651EBB7553D996E13AE7839 /* Pods_SantanderInvest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +297,7 @@
 		15D431CA20C5131500ECC7FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				152A930920C9D24F00A9D6AF /* IQKeyboardManagerSwift.framework */,
 				15D431D420C628EA00ECC7FC /* SnapKit.framework */,
 				15D431D320C628EA00ECC7FC /* TweeTextField_iOS.framework */,
 				15D431CF20C5AEE600ECC7FC /* ObjectMapper.framework */,
@@ -464,6 +468,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IQKeyboardManagerSwift.framework",
 			);
 			name = "Copy Carthage Built Frameworks";
 			outputPaths = (
@@ -471,6 +476,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AlamofireObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ObjectMapper.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
