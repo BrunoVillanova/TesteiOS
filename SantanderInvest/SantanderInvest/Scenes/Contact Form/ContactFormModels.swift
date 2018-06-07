@@ -44,7 +44,6 @@ enum ContactForm
     }
     struct ViewModel
     {
-      var formCells: [FormCell]
     }
   }
   

@@ -44,7 +44,7 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
     }
   }
   
-  func validateContactForm(contactFormFields: [ContactForm.ContactFormField]) {
+  func validateContactForm(contactFormFields: [ContactForm.ContactFormField]) -> Bool {
     let requiredFields = formCells.filter { $0.required == true }
     let requiredEditableFields = requiredFields.filter { $0.editable == true }
     let requiredEditableFieldsIDs = Set(requiredEditableFields.map { $0.id! })
@@ -85,13 +85,17 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
     
     let response = ContactForm.UpdateContactForm.Response(cells: invalidFormCells)
     self.presenter?.presentInvalidFormCells(response: response)
+    
+    return (invalidFormCells.count == 0)
   }
   
   
   func sendContactForm(request: ContactForm.SendContactForm.Request)
   {
     // TODO: send the populated ContactFormFields and show success
-    validateContactForm(contactFormFields: self.contactFormFields)
+    if validateContactForm(contactFormFields: self.contactFormFields) {
+      self.presenter?.presentSuccessSendingContactForm()
+    }
   }
   
   func updateContactForm(request: ContactForm.UpdateContactForm.Request) {

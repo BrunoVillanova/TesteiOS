@@ -16,6 +16,7 @@ protocol ContactFormPresentationLogic
 {
   func presentContactForm(response: ContactForm.FetchCells.Response)
   func presentInvalidFormCells(response: ContactForm.UpdateContactForm.Response)
+  func presentSuccessSendingContactForm()
 }
 
 class ContactFormPresenter: ContactFormPresentationLogic
@@ -38,5 +39,9 @@ class ContactFormPresenter: ContactFormPresentationLogic
   func presentInvalidFormCells(response: ContactForm.UpdateContactForm.Response) {
     let viewModel = ContactForm.UpdateContactForm.ViewModel(formCells: response.cells)
     viewController?.displayInvalidFormCells(viewModel: viewModel)
+  }
+  
+  func presentSuccessSendingContactForm() {
+    viewController?.displaySuccessSendingContactForm()
   }
 }

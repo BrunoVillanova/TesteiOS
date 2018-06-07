@@ -16,6 +16,7 @@ protocol ContactFormDisplayLogic: class
 {
   func displayFormCells(viewModel: ContactForm.FetchCells.ViewModel)
   func displayInvalidFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel)
+  func displaySuccessSendingContactForm()
 }
 
 class ContactFormViewController: UIViewController
@@ -75,7 +76,11 @@ class ContactFormViewController: UIViewController
     super.viewDidLoad()
     fetchFormCells()
   }
-  
+}
+
+// MARK: Private functions
+
+extension ContactFormViewController {
   fileprivate func sendContactForm() {
     let request = ContactForm.SendContactForm.Request()
     interactor?.sendContactForm(request: request)
@@ -88,7 +93,10 @@ class ContactFormViewController: UIViewController
   }
 }
 
+// MARK: Logic delegate
+
 extension ContactFormViewController: ContactFormDisplayLogic {
+  
   // MARK: Fetch Cells
   
   func fetchFormCells()
@@ -97,9 +105,13 @@ extension ContactFormViewController: ContactFormDisplayLogic {
     interactor?.fetchFormCells(request: request)
   }
   
+  // MARK: Display Cells
+  
   func displayFormCells(viewModel: ContactForm.FetchCells.ViewModel) {
     tableView.reloadData()
   }
+  
+  // MARK: Display Invalid Cells
   
   func displayInvalidFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel) {
     let formCells = viewModel.formCells
@@ -112,7 +124,15 @@ extension ContactFormViewController: ContactFormDisplayLogic {
       }
     }
   }
+  
+  // MARK: Display Form Sending Success
+  
+  func displaySuccessSendingContactForm() {
+
+  }
 }
+
+// MARK: TableView data source
 
 extension ContactFormViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -168,6 +188,8 @@ extension ContactFormViewController: UITableViewDataSource {
     return cell!
   }
 }
+
+// MARK: TableView delegate
 
 extension ContactFormViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
