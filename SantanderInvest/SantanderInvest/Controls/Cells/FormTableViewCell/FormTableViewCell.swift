@@ -95,6 +95,18 @@ class FormTableViewCell: UITableViewCell {
       textField.delegate = self
       textField.addTarget(self, action: #selector(textFieldValueChanged), for: .valueChanged)
       
+      if let typefield = formCellModel.typefield {
+        var keyboardType = UIKeyboardType.default
+        
+        if typefield == .email {
+          keyboardType = .emailAddress
+        } else if typefield == .telNumber {
+          keyboardType = .phonePad
+        }
+        
+        textField.keyboardType = keyboardType
+      }
+      
       let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? (CGFloat(formCellModel.topSpacing!) + 16.0) : 16.0
       
       controlContainer.addSubview(textField)
