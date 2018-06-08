@@ -17,9 +17,8 @@ extension String {
   }
   
   var isValidPhone: Bool {
-    //TODO: Implement phone validation
-//    ^(\(11\) [9][0-9]{4}-[0-9]{4})|(\(1[2-9]\) [5-9][0-9]{3}-[0-9]{4})|(\([2-9][1-9]\) [5-9][0-9]{3}-[0-9]{4})$
-    return true
+    let regex = "^\\d{10,11}$"
+    return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: self)
   }
 }
 
