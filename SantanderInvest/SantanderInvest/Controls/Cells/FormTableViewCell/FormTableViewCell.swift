@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import TweeTextField
+import InputMask
 
 enum FormTableViewCellStyle: Int {
   case field = 1,
@@ -34,6 +35,7 @@ class FormTableViewCell: UITableViewCell {
   var valueChanged: ((_ cell: FormTableViewCell, _ formCell:FormCell, _ value:Any?) -> Void)?
   var currentFormCell: FormCell?
   var currentControl: UIControl?
+  var maskedDelegate: MaskedTextFieldDelegate!
   var isValidValue: Bool? {
     didSet {
       if let textField = currentControl as? TweeAttributedTextField {
@@ -47,6 +49,7 @@ class FormTableViewCell: UITableViewCell {
   }
   
   override func prepareForReuse() {
+    maskedDelegate = nil
     currentFormCell = nil
     contentView.subviews.forEach { $0.removeFromSuperview() }
   }
@@ -95,6 +98,7 @@ class FormTableViewCell: UITableViewCell {
       textField.delegate = self
       textField.addTarget(self, action: #selector(textFieldValueChanged), for: .valueChanged)
       
+      
       if let typefield = formCellModel.typefield {
         var keyboardType = UIKeyboardType.default
         
@@ -102,6 +106,9 @@ class FormTableViewCell: UITableViewCell {
           keyboardType = .emailAddress
         } else if typefield == .telNumber {
           keyboardType = .phonePad
+          maskedDelegate = MaskedTextFieldDelegate(format: "([00]) [90000] [0000]")
+          maskedDelegate.listener = self
+          textField.delegate = maskedDelegate
         }
         
         textField.keyboardType = keyboardType
@@ -184,6 +191,12 @@ class FormTableViewCell: UITableViewCell {
 extension FormTableViewCell: UITextFieldDelegate {
   
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+    // If masked we need the raw value
+    guard maskedDelegate == nil else {
+      return true
+    }
+    
     if let currentFormCell = currentFormCell {
       var updatedText: String?
       if let text = textField.text as NSString? {
@@ -200,5 +213,18 @@ extension FormTableViewCell: UITextFieldDelegate {
       valueChanged?(self, currentFormCell, nil)
     }
     return true
+  }
+}
+
+extension FormTableViewCell: MaskedTextFieldDelegateListener {
+  
+  open func textField(
+    _ textField: UITextField,
+    didFillMandatoryCharacters complete: Bool,
+    didExtractValue value: String
+    ) {
+    if let currentFormCell = currentFormCell {
+      valueChanged?(self, currentFormCell, value)
+    }
   }
 }

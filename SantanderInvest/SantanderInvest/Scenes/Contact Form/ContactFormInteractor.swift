@@ -94,6 +94,7 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
   {
     // TODO: send the populated ContactFormFields and show success
     if validateContactForm(contactFormFields: self.contactFormFields) {
+      self.contactFormFields = []
       self.presenter?.presentSuccessSendingContactForm()
     }
   }
