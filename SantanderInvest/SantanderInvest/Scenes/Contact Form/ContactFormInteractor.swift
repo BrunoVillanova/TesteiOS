@@ -15,6 +15,7 @@ import UIKit
 protocol ContactFormBusinessLogic
 {
   var formCells: [FormCell] { get }
+  var contactFormFields: [ContactForm.ContactFormField] { get }
   func fetchFormCells(request: ContactForm.FetchCells.Request)
   func sendContactForm(request: ContactForm.SendContactForm.Request)
   func updateContactForm(request: ContactForm.UpdateContactForm.Request)
@@ -22,7 +23,7 @@ protocol ContactFormBusinessLogic
 
 protocol ContactFormDataStore
 {
-   var formCells: [FormCell] { get }
+  var formCells: [FormCell] { get }
 }
 
 class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
@@ -31,6 +32,7 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
   var worker: ContactFormWorker?
   var formCells = [FormCell]()
   var contactFormFields = [ContactForm.ContactFormField]()
+  var allFormCells = [FormCell]()
   
   // MARK: Fetch Cells
   
@@ -38,8 +40,9 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
   {
     worker = ContactFormWorker()
     worker?.fetchContactFormCells { (formCells, error) -> Void in
-      self.formCells = formCells!
-      let response = ContactForm.FetchCells.Response(cells: formCells, error: error)
+      self.allFormCells = formCells!
+      self.formCells = self.allFormCells.filter {!$0.hidden!}
+      let response = ContactForm.FetchCells.Response(cells: self.formCells, error: error)
       self.presenter?.presentContactForm(response: response)
     }
   }
@@ -63,7 +66,7 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
         
         if let theField = contactFormFields.first(where: { (cf) -> Bool in
           return cf.fieldId == foundRequiredFieldID
-        }), let theValue = theField.value {
+        }), let theValue = theField.value as? String {
           if typeField == .email {
             isValid = theValue.isValidEmail
           } else if typeField == .telNumber {
@@ -72,7 +75,7 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
             isValid = theValue.count > 3
           }
         }
-
+        
         if !isValid {
           invalidFieldsIDs.insert(foundRequiredFieldID)
         }
@@ -83,7 +86,17 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
       return invalidFieldsIDs.contains(ifc.id!)
     })
     
-    let response = ContactForm.UpdateContactForm.Response(cells: invalidFormCells)
+    var invalidCells = [IndexPath]()
+    
+    invalidFormCells.forEach { (invalidFormCell) in
+      if let invalidCellIndex = formCells.index(where: { (fc) -> Bool in
+        return fc.id == invalidFormCell.id
+      }) {
+        invalidCells.append(IndexPath(row: invalidCellIndex, section: 0))
+      }
+    }
+    
+    let response = ContactForm.UpdateContactForm.Response(insertedCells: [], deletedCells: [], invalidCells:invalidCells)
     self.presenter?.presentInvalidFormCells(response: response)
     
     return (invalidFormCells.count == 0)
@@ -94,7 +107,10 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
   {
     // TODO: send the populated ContactFormFields and show success
     if validateContactForm(contactFormFields: self.contactFormFields) {
+      self.formCells = self.allFormCells.filter {!$0.hidden!}
       self.contactFormFields = []
+      let response = ContactForm.FetchCells.Response(cells: self.formCells, error: nil)
+      self.presenter?.presentContactForm(response: response)
       self.presenter?.presentSuccessSendingContactForm()
     }
   }
@@ -109,5 +125,57 @@ class ContactFormInteractor: ContactFormBusinessLogic, ContactFormDataStore
       
       contactFormFields.append(contactFormField)
     }
+    
+    updateFormCellsIfNeeded(request.contactFormFields)
+  }
+  
+  fileprivate func updateFormCellsIfNeeded(_ contactFormFields: [ContactForm.ContactFormField]) {
+    
+    guard contactFormFields.count > 0 else {
+      self.formCells = self.allFormCells.filter {!$0.hidden!}
+      return
+    }
+    
+    contactFormFields.forEach { updateFormCellIfNeeded($0) }
+  }
+  
+  fileprivate func updateFormCellIfNeeded(_ contactFormField: ContactForm.ContactFormField) {
+    
+    let dynamicFormCells = self.allFormCells.filter { $0.show != nil }
+    
+    guard dynamicFormCells.count > 0 else {
+      return
+    }
+    
+    var insertedCells = [IndexPath]()
+    var deletedCells = [IndexPath]()
+    
+    if let dynamicFormCell = dynamicFormCells.first(where: { (fc) -> Bool in return fc.id == contactFormField.fieldId }),
+      let showId = dynamicFormCell.show,
+      let formCellToAdd = self.allFormCells.first(where: { (fc) -> Bool in fc.id == showId})
+    {
+      
+      if let formCellIndex = self.allFormCells.index(where: { (fc) -> Bool in
+        return fc.id == formCellToAdd.id
+      }) {
+        
+        if let showCell = contactFormField.value as? Bool {
+          
+          let existingIndex = self.formCells.index(where: { (fc) -> Bool in
+            return fc.id == formCellToAdd.id
+          })
+          
+          if showCell && existingIndex == nil {
+            self.formCells.insert(formCellToAdd, at: formCellIndex)
+            insertedCells.append(IndexPath(row: formCellIndex, section: 0))
+          } else if let existingIndex = existingIndex {
+            self.formCells.remove(at: existingIndex)
+            deletedCells.append(IndexPath(row: existingIndex, section: 0))
+          }
+        }
+      }
+    }
+    let response = ContactForm.UpdateContactForm.Response(insertedCells: insertedCells, deletedCells: deletedCells, invalidCells: [])
+    self.presenter?.presentUpdatedFormCells(response: response)
   }
 }

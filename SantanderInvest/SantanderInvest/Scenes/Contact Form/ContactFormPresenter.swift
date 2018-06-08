@@ -16,6 +16,7 @@ protocol ContactFormPresentationLogic
 {
   func presentContactForm(response: ContactForm.FetchCells.Response)
   func presentInvalidFormCells(response: ContactForm.UpdateContactForm.Response)
+  func presentUpdatedFormCells(response: ContactForm.UpdateContactForm.Response)
   func presentSuccessSendingContactForm()
 }
 
@@ -37,8 +38,13 @@ class ContactFormPresenter: ContactFormPresentationLogic
   }
   
   func presentInvalidFormCells(response: ContactForm.UpdateContactForm.Response) {
-    let viewModel = ContactForm.UpdateContactForm.ViewModel(formCells: response.cells)
+    let viewModel = ContactForm.UpdateContactForm.ViewModel(insertedCells: response.insertedCells, deletedCells: response.deletedCells, invalidCells: response.invalidCells)
     viewController?.displayInvalidFormCells(viewModel: viewModel)
+  }
+  
+  func presentUpdatedFormCells(response: ContactForm.UpdateContactForm.Response) {
+    let viewModel = ContactForm.UpdateContactForm.ViewModel(insertedCells: response.insertedCells, deletedCells: response.deletedCells, invalidCells: response.invalidCells)
+    viewController?.displayUpdatedFormCells(viewModel: viewModel)
   }
   
   func presentSuccessSendingContactForm() {

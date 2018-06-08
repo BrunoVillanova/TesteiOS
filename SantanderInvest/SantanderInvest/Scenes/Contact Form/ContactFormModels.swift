@@ -17,7 +17,7 @@ enum ContactForm
   
   struct ContactFormField {
     var fieldId: Int
-    var value: String?
+    var value: Any?
   }
   
   enum FetchCells
@@ -52,11 +52,15 @@ enum ContactForm
       var contactFormFields: [ContactFormField]
     }
     struct Response {
-      var cells: [FormCell]
+      var insertedCells = [IndexPath]()
+      var deletedCells = [IndexPath]()
+      var invalidCells = [IndexPath]()
     }
     struct ViewModel
     {
-      var formCells: [FormCell]
+      var insertedCells = [IndexPath]()
+      var deletedCells = [IndexPath]()
+      var invalidCells = [IndexPath]()
     }
   }
 }

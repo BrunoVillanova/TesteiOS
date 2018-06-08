@@ -47,10 +47,22 @@ class FormTableViewCell: UITableViewCell {
       }
     }
   }
+  var value: Any? {
+    didSet {
+      if let currentControl = currentControl as? UITextField, let value = value as? String {
+        currentControl.text = value
+      } else if let currentControl = currentControl as? CheckBox, let value = value as? Bool {
+        currentControl.isChecked = value
+      }
+    }
+  }
   
   override func prepareForReuse() {
     maskedDelegate = nil
+    currentControl = nil
     currentFormCell = nil
+    valueChanged = nil
+    maskedDelegate = nil
     contentView.subviews.forEach { $0.removeFromSuperview() }
   }
   
@@ -146,7 +158,9 @@ class FormTableViewCell: UITableViewCell {
       currentControl = checkBox
       checkBox.label.text = formCellModel.message
       checkBox.valueChanged = { (value) in
-        print("\(String(describing: formCellModel.message))? \(value)")
+        if let currentFormCell = self.currentFormCell {
+          self.valueChanged?(self, currentFormCell, value)
+        }
       }
       
       let topSpacing: CGFloat = (formCellModel.topSpacing != nil) ? CGFloat(formCellModel.topSpacing!) : 0.00

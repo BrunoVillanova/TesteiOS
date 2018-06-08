@@ -27,7 +27,7 @@ class ContactFormViewController: UIViewController
   
   var interactor: ContactFormBusinessLogic?
   var router: (NSObjectProtocol & ContactFormRoutingLogic & ContactFormDataPassing)?
-
+  
   // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
@@ -76,11 +76,7 @@ class ContactFormViewController: UIViewController
   {
     super.viewDidLoad()
     fetchFormCells()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-    tableView.reloadData()
+    tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
   }
 }
 
@@ -92,7 +88,7 @@ extension ContactFormViewController {
     interactor?.sendContactForm(request: request)
   }
   
-  fileprivate func updateContactFormField(_ fieldId: Int, value: String?) {
+  fileprivate func updateContactFormField(_ fieldId: Int, value: Any?) {
     let contactFormFields = [ContactForm.ContactFormField(fieldId: fieldId, value: value)]
     let request = ContactForm.UpdateContactForm.Request(contactFormFields: contactFormFields)
     interactor?.updateContactForm(request: request)
@@ -120,13 +116,9 @@ extension ContactFormViewController: ContactFormDisplayLogic {
   // MARK: Display Invalid Cells
   
   func displayInvalidFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel) {
-    let formCells = viewModel.formCells
-    let invalidFormCellsIDs = formCells.map { $0.id! }
-    tableView.visibleCells.forEach { (cell) in
-      if let cell = cell as? FormTableViewCell, let formCell = cell.currentFormCell {
-        if invalidFormCellsIDs.contains(formCell.id!) {
-          cell.shake()
-        }
+    viewModel.invalidCells.forEach { (indexPath) in
+      if let cell = tableView.cellForRow(at: indexPath) {
+        cell.shake()
       }
     }
   }
@@ -134,14 +126,14 @@ extension ContactFormViewController: ContactFormDisplayLogic {
   // MARK: Display logic
   func displayUpdatedFormCells(viewModel: ContactForm.UpdateContactForm.ViewModel) {
     tableView.beginUpdates()
-
+    tableView.insertRows(at: viewModel.insertedCells, with: .automatic)
+    tableView.deleteRows(at: viewModel.deletedCells, with: .automatic)
     tableView.endUpdates()
   }
   
   // MARK: Display Form Sending Success
   
   func displaySuccessSendingContactForm() {
-    
     if let vc = storyboard?.instantiateViewController(withIdentifier: "ContactFormSent") {
       navigationController?.push(viewController: vc)
     }
@@ -175,15 +167,14 @@ extension ContactFormViewController: UITableViewDataSource {
     }
     
     cell!.configure(formCellObject)
+    
+    if let contactFormField = interactor.contactFormFields.first(where: { (cff) -> Bool in return cff.fieldId == formCellObject.id }) {
+      cell!.value = contactFormField.value
+    }
+    
     cell!.valueChanged = { (cell, formCell, value) in
       
-      var theValue: String? = nil
-      
-      if let value = value as? String {
-        theValue = value
-      }
-      
-      self.updateContactFormField(formCell.id!, value: theValue)
+      self.updateContactFormField(formCell.id!, value: value)
       
       if formCell.type == FormCellType.field, let value = value as? String? {
         var validValue: Bool?
@@ -191,7 +182,6 @@ extension ContactFormViewController: UITableViewDataSource {
         if formCell.typefield == .email {
           validValue = value?.isValidEmail
         } else if formCell.typefield == .telNumber {
-          //TODO: Need API fix! Is not parsing this field correctly because API is returning "typefield": "telnumber" instead of value 2 as expected
           validValue = value?.isValidPhone
         }
         
