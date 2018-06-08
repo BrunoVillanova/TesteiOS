@@ -1,0 +1,16 @@
+PODS:
+  - TweeTextField (1.2.0)
+
+DEPENDENCIES:
+  - TweeTextField
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TweeTextField
+
+SPEC CHECKSUMS:
+  TweeTextField: 367d1393434018cfc8e40ad76087855b73253d99
+
+PODFILE CHECKSUM: 04f9b85275c2ab9f3d8709ee55d1822164f84c61
+
+COCOAPODS: 1.5.3

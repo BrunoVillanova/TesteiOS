@@ -1,0 +1,6 @@
+github "Alamofire/Alamofire" "4.7.2"
+github "Hearst-DD/ObjectMapper" "3.2.0"
+github "RedMadRobot/input-mask-ios" "3.4.1"
+github "SnapKit/SnapKit" "4.0.0"
+github "hackiftekhar/IQKeyboardManager" "v6.0.3"
+github "tristanhimmelman/AlamofireObjectMapper" "5.0.0"
